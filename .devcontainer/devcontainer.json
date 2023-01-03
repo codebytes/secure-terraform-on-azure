@@ -11,9 +11,11 @@
 		"ghcr.io/devcontainers/features/powershell:1": {},
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/devcontainers/features/go:1": {},
 		"ghcr.io/devcontainers/features/common-utils:2": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": "chromium-browser"
+		}
 	},
 	// Configure tool-specific properties.
 	"customizations": {
@@ -24,7 +26,9 @@
 				"streetsidesoftware.code-spell-checker",
 				"hashicorp.terraform",
 				"ms-azuretools.vscode-azureterraform",
-				"tfsec.tfsec"
+				"tfsec.tfsec",
+				"yzhang.markdown-all-in-one",
+				"marp-team.marp-vscode"
 			]
 		}
 	},
