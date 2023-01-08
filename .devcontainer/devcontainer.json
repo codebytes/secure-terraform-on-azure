@@ -4,15 +4,14 @@
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/devcontainers/features/common-utils:1": {},
-		"ghcr.io/devcontainers/features/dotnet:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/powershell:1": {},
-		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers/features/terraform:1": {},
-		"ghcr.io/devcontainers/features/common-utils:2": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers-contrib/features/terrascan:1": {},
+		"ghcr.io/dhoeric/features/terraform-docs:1": {},
+		"ghcr.io/dhoeric/features/aztfy:1": {},
+		"ghcr.io/dhoeric/features/tfsec:1": {},
+		"ghcr.io/dhoeric/features/trivy:1": {},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
 			"packages": "chromium-browser"
 		}
