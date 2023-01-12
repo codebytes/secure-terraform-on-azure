@@ -8,6 +8,7 @@
 		"ghcr.io/devcontainers/features/powershell:1": {},
 		"ghcr.io/devcontainers/features/terraform:1": {},
 		"ghcr.io/devcontainers-contrib/features/terrascan:1": {},
+		"ghcr.io/devcontainers-contrib/features/checkov:1": {},
 		"ghcr.io/dhoeric/features/terraform-docs:1": {},
 		"ghcr.io/dhoeric/features/aztfy:1": {},
 		"ghcr.io/dhoeric/features/tfsec:1": {},
