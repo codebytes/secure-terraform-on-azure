@@ -137,13 +137,32 @@ There are many open-source tools as well as commercial solutions. We can integra
 
 # tfsec
 
+tfsec is a static analysis security scanner for your Terraform code.
+
+Designed to run locally and in your CI pipelines, developer-friendly output and fully documented checks mean detection and remediation can take place as quickly and efficiently as possible
+
+![bg right fit](./img/tfsec-demo.gif)
+
 ---
 
 # Terrascan
 
+Terrascan allows us to automate the compliance and security scans against a pre-defined set of policies or custom policies as part of the CI process.
+
+It has support for Terraform, Azure, GCP, AWS, Kubernetes (manifests, Helm, Kustomize).
+
 ---
 
-# checkov
+# Checkov
+
+Checkov is another tool that lets us do scanning and compliance. 
+
+---
+
+# Using Multiple Tools
+
+Because these tools are independent and all scan the raw HCL or interpreted HCL, you can get different rules and better compliance.
+
 
 ---
 
@@ -158,14 +177,18 @@ There are many open-source tools as well as commercial solutions. We can integra
 
 # Pre-Commit Hooks
 
-run before code gets committed to a git repo.
+Pre-commit Hooks run before code gets committed to a git repo.
 You do it yourself or use the precommit framework.
+
+<!-- Insert pre-commit / pre-merge image -->
 
 ---
 
 # IDE Integration
 
 - extensions for vscode
+- DevContainers
+
 
 ---
 
@@ -173,6 +196,7 @@ You do it yourself or use the precommit framework.
 
 lots of marketplace extensions
 pr commenter
+Sample workflows for tfsec, terrascan, checkov
 
 ---
 
@@ -204,6 +228,7 @@ Putting it all together
 ---
 
 # Questions
+![bg right](./img/owl.png)
 
 ---
 
