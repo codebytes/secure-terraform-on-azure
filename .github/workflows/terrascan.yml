@@ -27,3 +27,9 @@ jobs:
         #find_vulnerabilities:
         #webhook_url:
         #webhook_token:
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        junit_files: "**/results.xml"
+
