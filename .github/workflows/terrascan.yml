@@ -12,14 +12,14 @@ jobs:
       uses: tenable/terrascan-action@main
       with:
         iac_type: 'terraform'
-        iac_version: 'v14'
+        #iac_version: 'v14'
         policy_type: 'azure'
         only_warn: true
         #scm_token: ${{ secrets.ACCESS_TOKEN }}
         #verbose: true
         #sarif_upload: true
         #non_recursive:
-        iac_dir: demos
+        #iac_dir: demos
         #policy_path:
         #skip_rules:
         #config_path:
