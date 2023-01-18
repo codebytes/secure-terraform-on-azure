@@ -98,14 +98,24 @@ Vulnerabilities can be a simple omitted property.
 
 ---
 
-# OWASP
+# OWASP Top 10
+
+<div class="columns">
+<div>
+<br />
 
 [A05:2021 – Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
 
-<br />
 
 ![50% center](./img/owasp.png)
 
+</div>
+<div>
+
+![50% center](./img/k8s-topten.png)
+
+</div>
+</div>
 
 ---
 
