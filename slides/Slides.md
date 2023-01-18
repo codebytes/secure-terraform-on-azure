@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: default
-footer: 'https://hachyderm.io/@Chrisayers - @Chris_L_Ayers - https://chris-ayers.com'
+footer: 'https://chris-ayers.com'
 style: |
   .columns {
     display: grid;
@@ -13,12 +13,30 @@ style: |
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   } 
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
+  
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
 ---
 
 ![bg right:60% contain](./img/secure-terraform.png)
 
 # Secure Terraform on Azure
+
+---
+
+![bg left:40%](./img/portrait.jpg)
+
+## Chris Ayers
+### Senior Customer Engineer<br>Microsoft
+
+<i class="fa-brands fa-twitter"></i> Twitter: @Chris\_L\_Ayers
+<i class="fa-brands fa-mastodon"></i> Mastodon: @Chrisayers@hachyderm.io
+<i class="fa-brands fa-linkedin"></i> LinkedIn: - [chris\-l\-ayers](https://linkedin.com/in/chris-l-ayers/)
+<i class="fa fa-window-maximize"></i> Blog: [https://chris-ayers\.com/](https://chris-ayers.com/)
+<i class="fa-brands fa-github"></i> GitHub: [Codebytes](https://github.com/codebytes)
 
 ---
 
@@ -84,7 +102,9 @@ Vulnerabilities can be a simple omitted property.
 
 [A05:2021 – Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
 
-![contain](./img/owasp.png)
+<br />
+
+![50% center](./img/owasp.png)
 
 
 ---
@@ -101,16 +121,16 @@ We can't just do security in production after everything is built, we need to go
 Each of these tools does similar things and are SAST (Static Analysis Security Tooling).
 With Terraform you can analyze in a few ways.
 
-1) hcl files
-1) hcl files after interpolation and parsing
+1) HCL files
+1) Terraform Plan
 
 ---
 
 # Rule customization
 
-- ignoring rules
-- overriding rules
-- adding custom rules
+- Ignoring rules
+- Overriding rules
+- Add custom rules
 
 ---
 
@@ -118,6 +138,7 @@ With Terraform you can analyze in a few ways.
 
 <div class="columns">
 <div>
+  <br />
 There are many open-source tools as well as commercial solutions. We can integrate these tools in our local environments as well as our pipelines to secure things earlier.
 </div>
 <div>
@@ -137,19 +158,25 @@ There are many open-source tools as well as commercial solutions. We can integra
 
 # tfsec
 
-tfsec is a static analysis security scanner for your Terraform code.
+tfsec is a static analysis security scanner for your Terraform code supported by Aquasecurity.
 
-Designed to run locally and in your CI pipelines, developer-friendly output and fully documented checks mean detection and remediation can take place as quickly and efficiently as possible
+Designed to run locally and in your CI pipelines, developer-friendly output and fully documented checks.
 
-![bg right fit](./img/tfsec-demo.gif)
+- OPA/Rego Policies
+- VS Code Extension
+- GitHub Actions
+
+![bg right 90%](./img/tfsec-demo.gif)
 
 ---
 
 # Terrascan
 
-Terrascan allows us to automate the compliance and security scans against a pre-defined set of policies or custom policies as part of the CI process.
+Terrascan has support for Terraform, Azure, GCP, AWS, Kubernetes  (manifests, Helm, Kustomize), Docker and even GitHub. Supported by Tenable and now integrated into nessus.
 
-It has support for Terraform, Azure, GCP, AWS, Kubernetes (manifests, Helm, Kustomize).
+Terrascan has a large number of built in policies as well as support for custom OPA/Rego Policies.
+
+![bg right 90%](./img/terrascan.png)
 
 ---
 
@@ -157,12 +184,29 @@ It has support for Terraform, Azure, GCP, AWS, Kubernetes (manifests, Helm, Kust
 
 Checkov is another tool that lets us do scanning and compliance. 
 
+Checkov is by BridgeCrew and python based. Checkov, like terrascan, supports Terraform, Azure, GCP, AWS, Kubernetes  (manifests, Helm, Kustomize) and Docker.
+
+![bg right 90%](./img/checkov.png)
+
+---
+
+# Bonus Tool - Terraform Compliance
+
+https://terraform-compliance.com/
+
+BDD and Cucumber testing!
+
+![bg right drop-shadow 90%](./img/terraform-compliance.png)
+
 ---
 
 # Using Multiple Tools
 
-Because these tools are independent and all scan the raw HCL or interpreted HCL, you can get different rules and better compliance.
+## Defense in Depth
 
+Because these tools are independent and all scan the raw HCL or interpreted HCL, you can get different rules and potentially better compliance.
+
+You can also hit a Signal to Noise problem.
 
 ---
 
@@ -180,36 +224,51 @@ Because these tools are independent and all scan the raw HCL or interpreted HCL,
 Pre-commit Hooks run before code gets committed to a git repo.
 You do it yourself or use the precommit framework.
 
-<!-- Insert pre-commit / pre-merge image -->
+<br />
+
+![center](./img/githooks.png)
+
 
 ---
 
 # IDE Integration
 
-- extensions for vscode
-- DevContainers
+- Extensions for VSCode
+  - [tfsec](https://marketplace.visualstudio.com/items?itemName=tfsec.tfsec)
+  - [checkov](https://marketplace.visualstudio.com/items?itemName=Bridgecrew.checkov)
+- DevContainer features
+  - [tfsec](https://github.com/dhoeric/features/tree/main/src/tfsec)
+  - [terrascan](https://github.com/devcontainers-contrib/features/tree/main/src/terrascan)
+  - [checkov](http://github.com/devcontainers-contrib/features/tree/main/src/checkov)
 
 
 ---
 
 # Pipeline integration
 
-lots of marketplace extensions
-pr commenter
-Sample workflows for tfsec, terrascan, checkov
+- GitHub Marketplace Extensions
+  - [tfsec action](https://github.com/marketplace/actions/tfsec-action)
+  - [Run tfsec PR commenter](https://github.com/marketplace/actions/run-tfsec-pr-commenter)
+  - [Terrascan IaC scanner](https://github.com/marketplace/actions/terrascan-iac-scanner)
+  - [Checkov GitHub Action](https://github.com/marketplace/actions/checkov-github-action)
+
+---
+
+# DEMOS
 
 ---
 
 # Backend providers
 
 - AzureRM
-- docs
+- Docs for other providers
 
 ---
 
 # Overriding backend provider configuration
+
 - Check docs
-- use environment vars 
+- Use environment vars 
 
 <!-- show vars or link -->
 ---
@@ -224,6 +283,8 @@ Auth based on repo, environment, branch
 # Demos
 
 Putting it all together
+
+Using https://github.com/tenable/KaiMonkey
 
 ---
 
@@ -248,9 +309,12 @@ Putting it all together
 <div>
 
 ## Contact
-<i class="fa fa-twitter"></i> [@Chris_L_Ayers](https://twitter.com/Chris_L_Ayers)
-<i class="fa fa-mastodon"></i> https://hachyderm.io/@Chrisayers
-<i class="fa fa-linkedin"></i> [chris-l-ayers](https://www.linkedin.com/in/chris-l-ayers/)
+
+<i class="fa-brands fa-twitter"></i> Twitter: @Chris\_L\_Ayers
+<i class="fa-brands fa-mastodon"></i> Mastodon: @Chrisayers@hachyderm.io
+<i class="fa-brands fa-linkedin"></i> LinkedIn: - [chris\-l\-ayers](https://linkedin.com/in/chris-l-ayers/)
+<i class="fa fa-window-maximize"></i> Blog: [https://chris-ayers\.com/](https://chris-ayers.com/)
+<i class="fa-brands fa-github"></i> GitHub: [Codebytes](https://github.com/codebytes)
 
 </div>
 </div>
