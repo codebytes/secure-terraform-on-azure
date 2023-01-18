@@ -1,3 +1,4 @@
+name: checkov
 on: [push]
 jobs:
   checkov-job:
@@ -19,7 +20,7 @@ jobs:
           soft_fail: false # optional: do not return an error code if there are failed checks
           framework: terraform # optional: run only on a specific infrastructure {cloudformation,terraform,kubernetes,all}
           output_format: junitxml # optional: the output format, one of: cli, json, junitxml, github_failed_only, or sarif. Default: sarif
-          output_file_path: reports/results.xml # folder and name of results file
+          output_file_path: reports/ # folder and name of results file
           download_external_modules: true # optional: download external terraform modules from public git repositories and terraform registry
             #var_file: ./testdir/gocd.yaml # optional: variable files to load in addition to the default files. Currently only supported for source Terraform and Helm chart scans.
             #log_level: DEBUG # optional: set log level. Default WARNING
@@ -35,4 +36,4 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         if: always() # always run even if the previous step fails
         with:
-          report_paths: 'reports/*.xml'
+          report_paths: 'reports/**/*.xml'
