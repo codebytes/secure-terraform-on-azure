@@ -13,6 +13,7 @@
 		"ghcr.io/dhoeric/features/aztfy:1": {},
 		"ghcr.io/dhoeric/features/tfsec:1": {},
 		"ghcr.io/dhoeric/features/trivy:1": {},
+		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
 			"packages": "chromium-browser"
 		}
@@ -27,6 +28,7 @@
 				"hashicorp.terraform",
 				"ms-azuretools.vscode-azureterraform",
 				"tfsec.tfsec",
+				"Bridgecrew.checkov",
 				"yzhang.markdown-all-in-one",
 				"marp-team.marp-vscode"
 			]
