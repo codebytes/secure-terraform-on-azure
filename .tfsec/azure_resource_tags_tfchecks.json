@@ -1,0 +1,34 @@
+{
+    "checks": [
+      {
+        "code": "cus-azure-resource-tags",
+        "description": "Custom check to ensure Azure resources have required tags for cost monitoring",
+        "resolution": "Add tags 'Environment' and 'Project'",
+        "requiredTypes": [
+          "resource"
+        ],
+        "requiredLabels": [
+          "azurerm_storage_account"
+        ],
+        "severity": "Medium",
+        "matchSpec": {
+          "action": "and",
+          "predicateMatchSpec": [
+            {
+              "name": "tags",
+              "action": "contains",
+              "value": "Environment"
+            },
+            {
+              "name": "tags",
+              "action": "contains",
+              "value": "Project"
+            }
+          ]
+        },
+        "errorMessage": "Following tags are required: 'Environment', 'Project'",
+        "relatedLinks": []
+      }
+    ]   
+  }
+  
