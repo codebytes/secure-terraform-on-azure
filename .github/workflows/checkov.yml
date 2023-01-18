@@ -1,5 +1,8 @@
 name: checkov
 on: [push]
+
+permissions: read-all
+
 jobs:
   checkov-job:
     runs-on: ubuntu-latest

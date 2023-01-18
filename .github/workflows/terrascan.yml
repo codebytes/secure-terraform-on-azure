@@ -1,4 +1,8 @@
+name: terrascan
 on: [push]
+
+permissions: read-all
+
 
 jobs:
   terrascan_job:
