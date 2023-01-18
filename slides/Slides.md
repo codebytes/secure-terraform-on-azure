@@ -45,6 +45,11 @@ style: |
 
 # Agenda
 
+<br />
+<br />
+
+<i class="fa fa-lock fa-5x"></i>
+
 </div>
 <div>
 
@@ -112,6 +117,8 @@ Vulnerabilities can be a simple omitted property.
 </div>
 <div>
 
+[Kubernetes OWASP Top Ten](https://owasp.org/www-project-kubernetes-top-ten/)
+
 ![50% center](./img/k8s-topten.png)
 
 </div>
@@ -136,14 +143,6 @@ With Terraform you can analyze in a few ways.
 
 ---
 
-# Rule customization
-
-- Ignoring rules
-- Overriding rules
-- Add custom rules
-
----
-
 # Security Tooling - OSS
 
 <div class="columns">
@@ -163,6 +162,14 @@ There are many open-source tools as well as commercial solutions. We can integra
 
 </div>
 </div>
+
+---
+
+# Rule customization
+
+- Ignoring rules
+- Overriding rules
+- Add custom rules
 
 ---
 
@@ -204,13 +211,13 @@ Checkov is by BridgeCrew and python based. Checkov, like terrascan, supports Ter
 
 https://terraform-compliance.com/
 
-BDD and Cucumber testing!
+BDD and Cucumber testing
 
 ![bg right drop-shadow 90%](./img/terraform-compliance.png)
 
 ---
 
-# Using Multiple Tools
+# You Can Use Multiple Tools
 
 ## Defense in Depth
 
@@ -222,17 +229,16 @@ You can also hit a Signal to Noise problem.
 
 # Workflow Options
 
-- pre-commit hooks
-- ide integration
-- ci/cd integration
-- DAST (environment scanning)
+- Pre-Commit Hooks
+- IDE Integration
+- CI/CD Integration
 
 ---
 
 # Pre-Commit Hooks
 
 Pre-commit Hooks run before code gets committed to a git repo.
-You do it yourself or use the precommit framework.
+You do it yourself or use the [Pre-Commit Framework](https://pre-commit.com/).
 
 <br />
 
@@ -270,7 +276,8 @@ You do it yourself or use the precommit framework.
 
 # Backend providers
 
-- AzureRM
+- [AzureRM](https://developer.hashicorp.com/terraform/language/settings/backends/azurerm)
+- [Terraform on Azure Docs](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli)
 - Docs for other providers
 
 ---
@@ -280,21 +287,18 @@ You do it yourself or use the precommit framework.
 - Check docs
 - Use environment vars 
 
-<!-- show vars or link -->
 ---
 
 # Open ID Connect (OIDC) Auth
 
 No more passwords
-Auth based on repo, environment, branch
+Auth is claims based on repo, environment, branch..
+
+![](./img/oidc-architecture.png)
 
 ---
 
 # Demos
-
-Putting it all together
-
-Using https://github.com/tenable/KaiMonkey
 
 ---
 
