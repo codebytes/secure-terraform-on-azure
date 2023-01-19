@@ -3,7 +3,7 @@
 #set vars
 #codebytes
 githubOrganizationName=$(echo $(git remote get-url origin) | cut -f4 -d"/")
-#github-oidc-to-azure
+#secure-terraform-on-azure
 githubRepositoryName=$(basename -s .git `git config --get remote.origin.url`)
 
 #create app registration
@@ -15,6 +15,9 @@ applicationRegistrationAppId=$(echo $applicationRegistrationDetails | jq -r '.ap
 az ad app federated-credential create \
    --id $applicationRegistrationObjectId \
    --parameters "{\"name\":\"${githubRepositoryName}-pr\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:pull_request\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
+az ad app federated-credential create \
+   --id $applicationRegistrationObjectId \
+   --parameters "{\"name\":\"${githubRepositoryName}-env-dev\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:environment:dev\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
 az ad app federated-credential create \
    --id $applicationRegistrationObjectId \
    --parameters "{\"name\":\"${githubRepositoryName}-env-prod\",\"issuer\":\"https://token.actions.githubusercontent.com\",\"subject\":\"repo:${githubOrganizationName}/${githubRepositoryName}:environment:prod\",\"audiences\":[\"api://AzureADTokenExchange\"]}"
