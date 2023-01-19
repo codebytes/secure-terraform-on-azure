@@ -1,8 +1,13 @@
 name: terrascan
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
-permissions: read-all
-
+permissions:
+  checks: write
+  pull-requests: write
 
 jobs:
   terrascan_job:
@@ -17,11 +22,11 @@ jobs:
       with:
         iac_type: 'terraform'
         #iac_version: 'v14'
-        policy_type: 'azure'
-        only_warn: true
+        #policy_type: 'azure'
+        only_warn: false
         #scm_token: ${{ secrets.ACCESS_TOKEN }}
-        #verbose: true
-        #sarif_upload: true
+        verbose: true
+        sarif_upload: true
         #non_recursive:
         #iac_dir: demos
         #policy_path:

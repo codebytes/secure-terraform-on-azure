@@ -1,7 +1,13 @@
 name: checkov
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
 
-permissions: read-all
+permissions:
+  checks: write
+  pull-requests: write
 
 jobs:
   checkov-job:
@@ -10,17 +16,17 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@master
-
+      
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:
-          #directory: example/
+          directory: .
           #file: example/tfplan.json # optional: provide the path for resource to be scanned. This will override the directory if both are provided.
           #check: CKV_AWS_1 # optional: run only a specific check_id. can be comma separated list
           #skip_check: CKV_AWS_2 # optional: skip a specific check_id. can be comma separated list
-          quiet: true # optional: display only failed checks
-          soft_fail: true # optional: do not return an error code if there are failed checks
+          quiet: false # optional: display only failed checks
+          soft_fail: false # optional: do not return an error code if there are failed checks
           framework: terraform # optional: run only on a specific infrastructure {cloudformation,terraform,kubernetes,all}
           output_format: junitxml #sarif # optional: the output format, one of: cli, json, junitxml, github_failed_only, or sarif. Default: sarif
           output_file_path: reports/ # folder and name of results file
@@ -35,3 +41,4 @@ jobs:
         if: always()
         with:
           junit_files: "reports/**/*.xml"
+          check_name: "checkov Results"
