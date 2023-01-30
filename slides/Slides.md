@@ -171,6 +171,9 @@ There are many open-source tools as well as commercial solutions. We can integra
 - Overriding rules
 - Add custom rules
 
+<!-- 
+custom rules: tfsec --rego-policy-dir ./tfsec_rego_policies/ ./custom_checks_examples/keyvault/ 
+-->
 ---
 
 # tfsec

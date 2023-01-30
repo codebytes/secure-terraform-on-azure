@@ -6,8 +6,6 @@ terraform {
       version = "=3.7.0"
     }
   }
-  backend "azurerm" {}
-
   required_version = ">= 1.1.0"
 }
 
@@ -16,8 +14,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraformdemo-${var.environment}-${var.location}"
-  location = var.location
+  name     = "terraform-pass"
+  location = "eastus"
   tags = {
     "CostCenter" = "it"
   }
