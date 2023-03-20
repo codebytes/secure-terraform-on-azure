@@ -10,7 +10,6 @@
 		"ghcr.io/devcontainers-contrib/features/terrascan:1": {},
 		"ghcr.io/devcontainers-contrib/features/checkov:1": {},
 		"ghcr.io/dhoeric/features/terraform-docs:1": {},
-		"ghcr.io/dhoeric/features/aztfy:1": {},
 		"ghcr.io/dhoeric/features/tfsec:1": {},
 		"ghcr.io/dhoeric/features/trivy:1": {},
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
