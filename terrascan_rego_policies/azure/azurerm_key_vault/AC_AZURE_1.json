@@ -1,0 +1,13 @@
+{
+	"name": "azureKeyVaultSoftDeleteRetentionDays",
+	"file": "azureKeyVaultSoftDeleteRetentionDays.rego",
+	"policy_type": "azure",
+    "resource_type": "azurerm_key_vault",
+    "template_args": {
+    },
+    "severity": "MEDIUM",
+	"description": "Key Vault Soft Delete Retention Days should be more than 14 days",
+    "category": "Data Protection",
+	"version": 1,
+	"id": "AC_AZURE_1000"
+}
