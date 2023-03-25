@@ -27,7 +27,7 @@ style: |
 
 ---
 
-![bg left:40%](./img/portrait.jpg)
+![bg left:40%](./img/portrait.png)
 
 ## Chris Ayers
 ### Senior Customer Engineer<br>Microsoft
