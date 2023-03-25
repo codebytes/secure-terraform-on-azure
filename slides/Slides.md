@@ -21,9 +21,9 @@ style: |
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
 ---
 
-![bg right:60% contain](./img/secure-terraform.png)
+![bg right:50% contain](./img/secure-terraform.png)
 
-# Secure Terraform on Azure
+# Securely Deploying Terraform
 
 ---
 
