@@ -22,8 +22,7 @@ resource "azurerm_subnet" "snet" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-
-resource "azurerm_subnet_network_security_group_association" "example" {
-  subnet_id                 = azurerm_subnet.snet.id
-  network_security_group_id = azurerm_network_security_group.nsg.id
-}
+# resource "azurerm_subnet_network_security_group_association" "example" {
+#   subnet_id                 = azurerm_subnet.snet.id
+#   network_security_group_id = azurerm_network_security_group.nsg.id
+# }
