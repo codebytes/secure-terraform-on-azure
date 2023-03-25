@@ -12,7 +12,8 @@ checks:
   matchSpec:
     name: name
     action: regexMatches
-    value: "^rg-[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+"
+    value:
+    value: "^(?!rg-[a-zA-Z]+-[a-zA-Z]+-[a-zA-Z]+).*$"
   errorMessage: improperly named resource group
   relatedLinks:
   - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
