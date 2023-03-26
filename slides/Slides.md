@@ -20,6 +20,7 @@ style: |
   
   @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
 ---
+<!-- _footer: 'https://github.com/codebytes/secure-terraform-on-azure' -->
 
 ![bg right:50% contain](./img/secure-terraform.png)
 
