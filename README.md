@@ -12,6 +12,14 @@ You can access the slides for the talk at the following link:
 
 The repository includes a variety of demos and resources to demonstrate the use of security tooling with Terraform in different scenarios. These demos and resources can help you understand how to implement security best practices effectively and take advantage of the available tools.
 
+## Related Blog Posts
+
+For a more detailed understanding of the topics covered in this talk and the related demos, you can read the following blog posts:
+
+- [Secure Terraform Part 1: Introduction to tfsec](https://chris-ayers.com/2022/12/29/secure-terraform-part1-tfsec)
+- [Secure Terraform Part 2: tfsec Customization](https://chris-ayers.com/2023/01/29/secure-terraform-part2-tfsec-customization)
+- [Secure Terraform Part 3: Introduction to Terrascan](https://chris-ayers.com/2023/03/22/secure-terraform-part3-terrascan)
+- [Secure Terraform Part 4: Introduction to Checkov](https://chris-ayers.com/2023/03/24/secure-terraform-part4-checkov)
 
 ## Resources
 
