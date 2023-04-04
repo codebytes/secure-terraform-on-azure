@@ -278,18 +278,40 @@ You do it yourself or use the [Pre-Commit Framework](https://pre-commit.com/).
 
 ---
 
-# Backend providers
-
-- [AzureRM](https://developer.hashicorp.com/terraform/language/settings/backends/azurerm)
-- [Terraform on Azure Docs](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?tabs=azure-cli)
-- Docs for other providers
+# Terraform State
 
 ---
 
-# Overriding backend provider configuration
+## The Need for Terraform State Security
 
+1. Prevent unauthorized access
+2. Maintain infrastructure integrity
+3. Avoid infrastructure drift
+4. Safeguard sensitive data
+
+---
+
+## On Azure Utilize Azure Blob Storage
+
+- Remote state storage with encryption and access control
+- Built-in encryption for data at rest
+- Integration with Azure AD for granular access control
+
+---
+
+## Configure Terraform Backend
+
+- Use managed identities or service principals
+- Pass authentication info via environment variables or command-line options
 - Check docs
-- Use environment vars 
+
+---
+
+## Restrict Access to Terraform State Files
+
+- Role-based access control with Azure AD
+- Limit access to the pipeline
+- Grant just-in-time access via Privileged Identity Management (PIM)
 
 ---
 
