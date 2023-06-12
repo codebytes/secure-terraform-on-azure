@@ -10,7 +10,7 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "example" {
-    name     = "rg-exampleresources-dev-westeur"
+  name     = "rg-exampleresources-dev-westeur"
   location = "West Europe"
   tags = {
     "CostCenter" = "it"
