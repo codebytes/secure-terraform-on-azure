@@ -24,7 +24,7 @@ style: |
 
 ![bg right:50% contain](./img/secure-terraform.png)
 
-# Securely Deploying Terraform
+# Securely Deploying Infrastructure As Code
 
 ---
 
