@@ -14,7 +14,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "terraform-pass"
+  name     = "rg-terraform-pass-sample"
   location = "eastus"
   tags = {
     "CostCenter" = "it"

@@ -14,6 +14,10 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "terraform-fail"
+  name     = "rg-terraform-fail-sample"
   location = "eastus"
+  tags = {
+    "environment" = "production"
+  }
+  
 }
