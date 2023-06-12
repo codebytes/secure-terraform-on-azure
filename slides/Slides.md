@@ -41,20 +41,12 @@ style: |
 
 ---
 
-<div class="columns">
-<div>
+
+![bg left](img/hacker-terraform.jpg)
 
 # Agenda
 
-<br />
-<br />
-
-<i class="fa fa-lock fa-5x"></i>
-
-</div>
-<div>
-
-- ### What is IaC?
+- ### What is Infrastructure as Code (IaC)?
 - ### Security Tooling
   - #### Rules & Customization
   - #### Workflow
@@ -63,22 +55,21 @@ style: |
   - #### VSCode Integration
   - #### GitHub Actions
 
-</div>
-</div>
+---
+
+# What is Infrastructure as Code (IaC)?
+
+Infrastructure as code (IaC) is a way to manage and provision infrastructure resources using configuration files and automation tools. 
+
+![bg right:40% fit](img/iac.drawio.png)
 
 ---
 
-# What is IaC?
+## Why use Infrastructure as Code (IaC)?
 
-<div class="columns">
-<div>
-Infrastructure as code (IaC) is a way to manage and provision infrastructure resources using configuration files and automation tools. 
-</div>
-
-<div>
 The goal of IaC is to make it easier to deploy and manage infrastructure in a repeatable, reliable way, and to reduce the risk of errors caused by manual configuration.
-</div>
-</div>
+
+![bg right:40% fit](img/iac.drawio.png)
 
 ---
 
@@ -86,7 +77,7 @@ The goal of IaC is to make it easier to deploy and manage infrastructure in a re
 
 Running static analysis security testing (SAST) tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
 
----
+--- 
 
 # Why run Security Tooling?
 
@@ -131,6 +122,27 @@ Vulnerabilities can be a simple omitted property.
 ## Save time and money
 
 We can't just do security in production after everything is built, we need to go into solutions with security baked in.
+
+---
+
+# Security Tooling: SAST vs DAST 
+
+<div class="columns">
+<div>
+
+## Static Application Security Testing (**SAST**)
+
+**SAST** is a method of debugging that is performed by looking at the source code of an application without actually executing the application. 
+
+</div>
+<div>
+
+## Dynamic Application Security Testing (**DAST**)
+
+**DAST**, on the other hand, involves testing an application while it is running, in order to identify potential security vulnerabilities.
+
+</div>
+</div>
 
 ---
 
@@ -218,6 +230,18 @@ https://terraform-compliance.com/
 BDD and Cucumber testing
 
 ![bg right drop-shadow 90%](./img/terraform-compliance.png)
+
+---
+
+# Bonus Tool - Atlantis
+
+https://www.runatlantis.io/
+
+Terraform PR Automation
+Handles planning, locking, and applying
+
+![bg right drop-shadow 90%](./img/atlantis-lock.png)
+
 
 ---
 
