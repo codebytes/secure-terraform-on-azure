@@ -18,7 +18,12 @@ style: |
     margin: 0 auto;
   }
   
-  @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
+  .fa-twitter { color: aqua; }
+  .fa-mastodon { color: purple; }
+  .fa-linkedin { color: blue; }
+  .fa-window-maximize { color: skyblue; }
+
+  @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ---
 <!-- _footer: 'https://github.com/codebytes/secure-terraform-on-azure' -->
 
@@ -73,28 +78,6 @@ The goal of IaC is to make it easier to deploy and manage infrastructure in a re
 
 ---
 
-# Security Tooling
-
-Running static analysis security testing (SAST) tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
-
---- 
-
-# Why run Security Tooling?
-
-## <i class="fa-solid fa-lock"></i> To catch security issues early
-## <i class="fa-regular fa-square-check"></i> To ensure compliance
-## <i class="fa-solid fa-chart-line"></i> To improve the security of your infrastructure
-## <i class="fa-regular fa-clock"></i> To save time and effort by shifting Left
-
----
-
-# Security and Compliance
-
-There have been multiple breaches and attacks due to misconfiguration.
-Vulnerabilities can be a simple omitted property.
-
----
-
 # OWASP Top 10
 
 <div class="columns">
@@ -122,6 +105,28 @@ Vulnerabilities can be a simple omitted property.
 ## Save time and money
 
 We can't just do security in production after everything is built, we need to go into solutions with security baked in.
+
+---
+
+# Security Tooling
+
+Running static analysis security testing (SAST) tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
+
+--- 
+
+# Why run Security Tooling?
+
+## <i class="fa-solid fa-lock"></i> To catch security issues early
+## <i class="fa-regular fa-square-check"></i> To ensure compliance
+## <i class="fa-solid fa-chart-line"></i> To improve the security of your infrastructure
+## <i class="fa-regular fa-clock"></i> To save time and effort by shifting Left
+
+---
+
+# Security and Compliance
+
+There have been multiple breaches and attacks due to misconfiguration.
+Vulnerabilities can be a simple omitted property.
 
 ---
 
@@ -180,13 +185,23 @@ There are many open-source tools as well as commercial solutions. We can integra
 
 # Rule customization
 
+<div class="columns">
+<div>
+
 - Ignoring rules
 - Overriding rules
 - Add custom rules
 
+</div>
+<div>
+<i class="fa-2xl fa-solid fa-user-gear"></i>
+</div>
+</div>
+
 <!-- 
 custom rules: tfsec --rego-policy-dir ./tfsec_rego_policies/ ./custom_checks_examples/keyvault/ 
 -->
+
 ---
 
 # tfsec
