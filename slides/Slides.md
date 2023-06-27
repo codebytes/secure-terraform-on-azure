@@ -66,7 +66,7 @@ style: |
 
 Infrastructure as code (IaC) is a way to manage and provision infrastructure resources using configuration files and automation tools. 
 
-![bg right:40% fit](img/iac.drawio.png)
+![bg right:40% 90% fit](img/iac.drawio.png)
 
 ---
 
@@ -74,7 +74,16 @@ Infrastructure as code (IaC) is a way to manage and provision infrastructure res
 
 The goal of IaC is to make it easier to deploy and manage infrastructure in a repeatable, reliable way, and to reduce the risk of errors caused by manual configuration.
 
-![bg right:40% fit](img/iac.drawio.png)
+![bg right:40% 90% fit](img/iac.drawio.png)
+
+---
+
+# Security and Compliance
+
+![bg left fit 90%](img/cloud-security.png)
+
+There have been multiple breaches and attacks due to misconfiguration.
+Vulnerabilities can be a simple omitted property.
 
 ---
 
@@ -82,7 +91,6 @@ The goal of IaC is to make it easier to deploy and manage infrastructure in a re
 
 <div class="columns">
 <div>
-<br />
 
 [A05:2021 – Security Misconfiguration](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
 
@@ -101,6 +109,13 @@ The goal of IaC is to make it easier to deploy and manage infrastructure in a re
 
 ---
 
+# Cloud Misconfiguration
+
+![w:1000](./img/cloud-misconfiguration.png)
+Source: The State of Cloud Security 2021 Report
+
+---
+
 # Shift Left on Security
 ## Save time and money
 
@@ -110,7 +125,7 @@ We can't just do security in production after everything is built, we need to go
 
 # Security Tooling
 
-Running static analysis security testing (SAST) tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
+Running security testing tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
 
 --- 
 
@@ -120,13 +135,6 @@ Running static analysis security testing (SAST) tools against infrastructure as 
 ## <i class="fa-regular fa-square-check"></i> To ensure compliance
 ## <i class="fa-solid fa-chart-line"></i> To improve the security of your infrastructure
 ## <i class="fa-regular fa-clock"></i> To save time and effort by shifting Left
-
----
-
-# Security and Compliance
-
-There have been multiple breaches and attacks due to misconfiguration.
-Vulnerabilities can be a simple omitted property.
 
 ---
 
@@ -238,17 +246,19 @@ Checkov is by BridgeCrew and python based. Checkov, like terrascan, supports Ter
 
 ---
 
-# Bonus Tool - Terraform Compliance
+# Bonus Tool - [Yor](https://yor.io/)
 
-https://terraform-compliance.com/
+https://yor.io/
 
-BDD and Cucumber testing
+- **Tagging**: Automates tagging in IaC for better resource traceability.
+- **Context**: Provides enriched data on resource deployment.
+- **CI/CD Integration**: Facilitates automated tagging at scale.
 
-![bg right drop-shadow 90%](./img/terraform-compliance.png)
+![bg right fit 90%](./img/yor.png)
 
 ---
 
-# Bonus Tool - Atlantis
+# Bonus Tool - [Atlantis](https://www.runatlantis.io/)
 
 https://www.runatlantis.io/
 
