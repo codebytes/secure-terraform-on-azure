@@ -28,11 +28,12 @@ jobs:
       - uses: actions/checkout@v3
       - name: Copy images
         run: mkdir build && cp -R slides/img build/img && cp -R slides/themes build/themes
+
       - name: Marp Build (README)
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
           args: --theme-set slides/themes -o build/index.html --html -- slides/Slides.md
-      env:
+        env:
           MARP_USER: root:root
       - name: Setup Pages
         uses: actions/configure-pages@v3
