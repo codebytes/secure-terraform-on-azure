@@ -1,35 +1,17 @@
 ---
 marp: true
-theme: default
+theme: custom-default
 footer: 'https://chris-ayers.com'
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-  .columns3 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  } 
-  img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .fa-twitter { color: aqua; }
-  .fa-mastodon { color: purple; }
-  .fa-linkedin { color: blue; }
-  .fa-window-maximize { color: skyblue; }
-
-  @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ---
+
 <!-- _footer: 'https://github.com/codebytes/secure-terraform-on-azure' -->
 
-![bg right:50% contain](./img/secure-terraform.png)
+![bg right:50% fit 90%](./img/secure-terraform.png)
 
 # Securely Deploying Infrastructure As Code
+
+## Chris Ayers 
+![w:150](./img/portrait.png)
 
 ---
 
@@ -46,16 +28,15 @@ style: |
 
 ---
 
-
 ![bg left](img/hacker-terraform.jpg)
 
 # Agenda
 
-- ### What is Infrastructure as Code (IaC)?
-- ### Security Tooling
+* ### What is Infrastructure as Code (IaC)?
+* ### Security Tooling
   - #### Rules & Customization
   - #### Workflow
-- ### Integration
+* ### Integration
   - #### Precommit hook
   - #### VSCode Integration
   - #### GitHub Actions
@@ -128,13 +109,16 @@ We can't just do security in production after everything is built, we need to go
 Running security testing tools against infrastructure as code (IaC) is a way to ensure that the infrastructure being provisioned is secure and compliant with best practices. 
 
 --- 
+<!-- _class: hidden-bullets -->
 
-# Why run Security Tooling?
+# Why run Security Tooling? 
 
-## <i class="fa-solid fa-lock"></i> To catch security issues early
-## <i class="fa-regular fa-square-check"></i> To ensure compliance
-## <i class="fa-solid fa-chart-line"></i> To improve the security of your infrastructure
-## <i class="fa-regular fa-clock"></i> To save time and effort by shifting Left
+<style scoped>li { list-style-type: none}</style>
+
+* ## <i class="fa-solid fa-lock"></i> To catch security issues early
+* ## <i class="fa-regular fa-square-check"></i> To ensure compliance
+* ## <i class="fa-solid fa-chart-line"></i> To improve the security of your infrastructure
+* ## <i class="fa-regular fa-clock"></i> To save time and effort by shifting Left
 
 ---
 
@@ -164,8 +148,8 @@ Running security testing tools against infrastructure as code (IaC) is a way to 
 Each of these tools does similar things and are SAST (Static Analysis Security Tooling).
 With Terraform you can analyze in a few ways.
 
-1) HCL files
-1) Terraform Plan
+* HCL files
+* Terraform Plan
 
 ---
 
@@ -183,28 +167,19 @@ There are many open-source tools as well as commercial solutions. We can integra
 | CI/CD  | Yes | Yes | Yes |
 | Rules | 100+ | 100+ | 100+ |
 | Custom Rules | Yes | Yes | Yes |
-| Whitelist Rules | Yes | Yes | Yes |
-| Ignore Rules | Yes | Yes | Yes |
+| Rule Language | json, yaml, rego | rego | python |
 
 </div>
 </div>
 
 ---
 
+![bg right fit](img/rules.png)
 # Rule customization
 
-<div class="columns">
-<div>
-
-- Ignoring rules
-- Overriding rules
-- Add custom rules
-
-</div>
-<div>
-<i class="fa-2xl fa-solid fa-user-gear"></i>
-</div>
-</div>
+* Ignoring rules
+* Overriding rules
+* Add custom rules
 
 <!-- 
 custom rules: tfsec --rego-policy-dir ./tfsec_rego_policies/ ./custom_checks_examples/keyvault/ 
@@ -267,7 +242,6 @@ Handles planning, locking, and applying
 
 ![bg right drop-shadow 90%](./img/atlantis-lock.png)
 
-
 ---
 
 # You Can Use Multiple Tools
@@ -282,9 +256,9 @@ You can also hit a Signal to Noise problem.
 
 # Workflow Options
 
-- Pre-Commit Hooks
-- IDE Integration
-- CI/CD Integration
+* Pre-Commit Hooks
+* IDE Integration
+* CI/CD Integration
 
 ---
 
@@ -297,7 +271,6 @@ You do it yourself or use the [Pre-Commit Framework](https://pre-commit.com/).
 
 ![center](./img/githooks.png)
 
-
 ---
 
 # IDE Integration
@@ -309,7 +282,6 @@ You do it yourself or use the [Pre-Commit Framework](https://pre-commit.com/).
   - [tfsec](https://github.com/dhoeric/features/tree/main/src/tfsec)
   - [terrascan](https://github.com/devcontainers-contrib/features/tree/main/src/terrascan)
   - [checkov](http://github.com/devcontainers-contrib/features/tree/main/src/checkov)
-
 
 ---
 

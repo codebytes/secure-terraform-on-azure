@@ -1,6 +1,6 @@
 {
-	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"name": "SecureTerraform",
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	"features": {
 		"ghcr.io/devcontainers/features/azure-cli:1": {},
@@ -14,12 +14,18 @@
 		"ghcr.io/dhoeric/features/trivy:1": {},
 		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "chromium-browser"
+			"packages": "chromium"
 		}
 	},
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"markdown.marp.enableHtml" : true,
+				"markdown.marp.themes": [
+					"./slides/themes/custom-default.css"
+				  ]
+			},			
 			"extensions": [
 				"GitHub.copilot",
 				"GitHub.vscode-pull-request-github",
@@ -29,7 +35,8 @@
 				"tfsec.tfsec",
 				"Bridgecrew.checkov",
 				"yzhang.markdown-all-in-one",
-				"marp-team.marp-vscode"
+				"marp-team.marp-vscode",
+				"bierner.markdown-mermaid"
 			]
 		}
 	},
