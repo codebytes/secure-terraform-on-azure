@@ -269,7 +269,7 @@ You do it yourself or use the [Pre-Commit Framework](https://pre-commit.com/).
 
 <br />
 
-![center](./img/githooks.png)
+![center w:1200px](./img/githooks.png)
 
 ---
 
