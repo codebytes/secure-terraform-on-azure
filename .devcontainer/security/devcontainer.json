@@ -13,20 +13,11 @@
 		"ghcr.io/dhoeric/features/terraform-docs:1": {},
 		"ghcr.io/dhoeric/features/tfsec:1": {},
 		"ghcr.io/dhoeric/features/trivy:1": {},
-		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {},
-		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "chromium"
-		}
+		"ghcr.io/devcontainers-contrib/features/pre-commit:2": {}
 	},
 	// Configure tool-specific properties.
 	"customizations": {
-		"vscode": {
-			"settings": {
-				"markdown.marp.enableHtml" : true,
-				"markdown.marp.themes": [
-					"./slides/themes/custom-default.css"
-				  ]
-			},			
+		"vscode": {	
 			"extensions": [
 				"GitHub.copilot",
 				"GitHub.vscode-pull-request-github",
@@ -34,10 +25,7 @@
 				"hashicorp.terraform",
 				"ms-azuretools.vscode-azureterraform",
 				"tfsec.tfsec",
-				"Bridgecrew.checkov",
-				"yzhang.markdown-all-in-one",
-				"marp-team.marp-vscode",
-				"bierner.markdown-mermaid"
+				"Bridgecrew.checkov"
 			]
 		}
 	},
