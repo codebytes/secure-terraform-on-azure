@@ -1,0 +1,25 @@
+{
+	"name": "SecureTerraformDocker",
+	"build": { "dockerfile": "Dockerfile" },
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {	
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.vscode-pull-request-github",
+				"streetsidesoftware.code-spell-checker",
+				"hashicorp.terraform",
+				"ms-azuretools.vscode-azureterraform",
+				"tfsec.tfsec",
+				"Bridgecrew.checkov"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
