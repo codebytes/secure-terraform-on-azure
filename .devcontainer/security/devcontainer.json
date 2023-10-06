@@ -25,7 +25,8 @@
 				"hashicorp.terraform",
 				"ms-azuretools.vscode-azureterraform",
 				"tfsec.tfsec",
-				"Bridgecrew.checkov"
+				"Bridgecrew.checkov",
+				"aquasecurityofficial.trivy-vulnerability-scanner"
 			]
 		}
 	},
