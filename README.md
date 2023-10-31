@@ -20,6 +20,7 @@ For a more detailed understanding of the topics covered in this talk and the rel
 - [Secure Terraform Part 2: tfsec Customization](https://chris-ayers.com/2023/01/29/secure-terraform-part2-tfsec-customization)
 - [Secure Terraform Part 3: Introduction to Terrascan](https://chris-ayers.com/2023/03/22/secure-terraform-part3-terrascan)
 - [Secure Terraform Part 4: Introduction to Checkov](https://chris-ayers.com/2023/03/24/secure-terraform-part4-checkov)
+- [Secure Terraform Part 5: Terraform State](https://chris-ayers.com/2023/04/05/secure-terraform-part5-terraform-state)
 
 ## Resources
 
