@@ -1,6 +1,6 @@
 # Secure Terraform on Azure
 
-This repository contains the slide deck, demos, and resources for the "Securely Deploying Terraform" talk by Chris Ayers, Senior Customer Engineer at Microsoft. The talk provides an in-depth look at security tooling, best practices, and how to implement them when using Terraform with Azure.
+This repository contains the slide deck, demos, and resources for the "Securely Deploying Terraform" talk by Chris Ayers, Senior Customer Engineer at Microsoft. The talk provides an in-depth look at security tooling, best practices, and how to implement them when using Terraform with Azure. 
 
 ## Slides
 
