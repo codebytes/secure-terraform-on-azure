@@ -24,20 +24,15 @@ img[alt~="center"] {
   list-style-type: none
 }
 
-.fa-twitter {
-  color: aqua;
+.fa-twitter { color: aqua; }
+.fa-mastodon { color: purple; }
+.fa-linkedin { color: blue; }
+.fa-window-maximize { color: skyblue; }
+.fa-bluesky { color: skyblue; }
+
+svg[id^="mermaid-"] { 
+  max-width: 960px; 
+  max-height: 600px; 
 }
 
-.fa-mastodon {
-  color: purple;
-}
-
-.fa-linkedin {
-  color: blue;
-}
-
-.fa-window-maximize {
-  color: skyblue;
-}
-
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
