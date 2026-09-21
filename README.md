@@ -6,6 +6,8 @@ Secure Terraform on Azure with security tooling, custom rules, and checks integr
 
 [View HTML slides](https://chris-ayers.com/secure-terraform-on-azure/) | [Download PDF](https://chris-ayers.com/secure-terraform-on-azure/Slides.pdf)
 
+The HTML slides retain the animated tfsec demo; the PDF and printed slides use a representative scan-results frame.
+
 ## Resources
 
 - [Slide source](slides/Slides.md)

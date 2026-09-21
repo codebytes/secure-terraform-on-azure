@@ -191,6 +191,16 @@ custom rules: tfsec --rego-policy-dir ./tfsec_rego_policies/ ./custom_checks_exa
 
 # tfsec
 
+<!-- _class: tfsec-demo -->
+<!-- Print still extracted from tfsec-demo.gif at 00:00:35 with ffmpeg, without running tfsec. -->
+<style>
+@media print {
+  section.tfsec-demo figure {
+    background-image: url("./img/tfsec-demo-print.png") !important;
+  }
+}
+</style>
+
 tfsec is a static analysis security scanner for your Terraform code supported by Aquasecurity.
 
 Designed to run locally and in your CI pipelines, developer-friendly output and fully documented checks.
