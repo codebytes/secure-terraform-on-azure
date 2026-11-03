@@ -6,7 +6,7 @@ This repository holds the slides and demos for Chris Ayers' talk **Securely Depl
 
 - `slides/`: Marp deck, images in `slides/img/`, themes in `slides/themes/`.
 - `example/dev/`, `example/prod/`, `example/modules/`: the Terraform deployment the CI workflow plans and applies.
-- `demos/sample1-sa`, `demos/sample2-kv`, `demos/sample3-as`: small Terraform samples the scanners run against on stage; `demos/KaiMonkey` is a git submodule of Tenable's vulnerable-by-design Terraform.
+- `demos/sample1-sa`, `demos/sample2-kv`, `demos/sample3-as`: small Terraform samples the scanners run against on stage; `demos/KaiMonkey` is a Git submodule of Tenable's vulnerable-by-design Terraform.
 - `.tfsec/`, `tfsec_rego_policies/`, `terrascan_rego_policies/`, `custom_checks_examples/`: custom policies for tfsec, Terrascan, and Checkov.
 
 ## Slides
@@ -34,7 +34,7 @@ This repository holds the slides and demos for Chris Ayers' talk **Securely Depl
 
 ## Shared skills
 
-Use the shared skills from [codebytes/skills](https://github.com/codebytes/skills) (for Copilot CLI: `copilot plugin install https://github.com/codebytes/skills`). Don't copy their instructions or scripts into this repo.
+Use the shared skills from [codebytes/skills](https://github.com/codebytes/skills) (for Copilot CLI: `copilot plugin install https://github.com/codebytes/skills`). Don't copy their instructions or scripts into this repository.
 
 | Task                                                                          | Skill               |
 | ----------------------------------------------------------------------------- | ------------------- |
