@@ -8,6 +8,10 @@ Secure Terraform on Azure with security tooling, custom rules, and checks integr
 
 The HTML slides retain the animated tfsec demo; the PDF and printed slides use a representative scan-results frame.
 
+## Recordings
+
+- [NDC Security 2023](https://www.youtube.com/watch?v=tPdDS3UZpOQ)
+
 ## Resources
 
 - [Slide source](slides/Slides.md)
